@@ -2,14 +2,13 @@ export function getUI(documentRef = document) {
   return {
     subtitle: documentRef.getElementById('subtitle'),
     playersHeading: documentRef.getElementById('playersHeading'),
-    settingsHeading: documentRef.getElementById('settingsHeading'),
+    deckHeading: documentRef.getElementById('deckHeading'),
     cardLabel: documentRef.getElementById('cardLabel'),
     safeModeLabel: documentRef.getElementById('safeModeLabel'),
     ruleMinLabel: documentRef.getElementById('ruleMinLabel'),
     ruleMaxLabel: documentRef.getElementById('ruleMaxLabel'),
     reduceDupesLabel: documentRef.getElementById('reduceDupesLabel'),
     feedbackHeading: documentRef.getElementById('feedbackHeading'),
-    settingsHelp: documentRef.getElementById('settingsHelp'),
     playerInput: documentRef.getElementById('playerInput'),
     playersList: documentRef.getElementById('playersList'),
     cardText: documentRef.getElementById('cardText'),
@@ -19,6 +18,10 @@ export function getUI(documentRef = document) {
     prevBtn: documentRef.getElementById('prevBtn'),
     nextBtn: documentRef.getElementById('nextBtn'),
     resetBtn: documentRef.getElementById('resetBtn'),
+    copyDeckBtn: documentRef.getElementById('copyDeckBtn'),
+    exportDeckBtn: documentRef.getElementById('exportDeckBtn'),
+    importDeckBtn: documentRef.getElementById('importDeckBtn'),
+    importDeckInput: documentRef.getElementById('importDeckInput'),
     safeModeToggle: documentRef.getElementById('safeModeToggle'),
     ruleMinInput: documentRef.getElementById('ruleMinInput'),
     ruleMaxInput: documentRef.getElementById('ruleMaxInput'),
@@ -35,13 +38,13 @@ export function setCardText(ui, text) {
   ui.cardText.textContent = text;
 }
 
-export function renderCurrentCard(ui, state, fallbackText, formatCard = (text) => text) {
+export function renderCurrentCard(ui, state, fallbackText) {
   if (state.historyIndex >= 0 && state.history[state.historyIndex]) {
-    setCardText(ui, formatCard(state.history[state.historyIndex]));
+    setCardText(ui, state.history[state.historyIndex]);
     return;
   }
 
-  setCardText(ui, state.lastCard ? formatCard(state.lastCard) : fallbackText);
+  setCardText(ui, state.lastCard || fallbackText);
 }
 
 export function renderPlayers(ui, state, onRemovePlayer) {

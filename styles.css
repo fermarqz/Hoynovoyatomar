@@ -191,10 +191,3 @@ button.secondary {
   width: 18px;
   height: 18px;
 }
-
-.help-text {
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 0.9rem;
-  line-height: 1.4;
-}
