@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Hoy No Voy A Tomar</title>
+</head>
+<body style="font-family: Arial; text-align: center; padding: 40px;">
+  <h1>🍻 Hoy No Voy A Tomar</h1>
+  <p>My game is live.</p>
+  <button onclick="drawCard()">Draw Card</button>
+  <p id="card" style="font-size: 24px; margin-top: 20px;"></p>
+
+  <script>
+    const cards = [
+      "Take 2 drinks",
+      "Give 3 drinks",
+      "Everyone drinks",
+      "Skip your turn",
+      "Make a rule"
+    ];
+
+    function drawCard() {
+      const randomCard = cards[Math.floor(Math.random() * cards.length)];
+      document.getElementById("card").innerText = randomCard;
+    }
+  </script>
+</body>
+</html>
