@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>#hoynovoyatomar</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="title">
+      <h1>#hoynovoyatomar</h1>
+      <h2 id="subtitle">THE GAME</h2>
+    </div>
+
+    <div class="panel">
+      <h2 id="playersHeading">Jugadores</h2>
+      <div class="row">
+        <input id="playerInput" placeholder="Nombre" maxlength="24" />
+        <button id="addPlayerBtn">+ Agregar</button>
+        <button id="clearPlayersBtn" class="danger">Reset</button>
+      </div>
+      <div id="playersList" class="chips"></div>
+    </div>
+
+    <div class="panel">
+      <h2 id="deckHeading">Mazo</h2>
+      <div class="row">
+        <button id="copyDeckBtn" class="secondary">Copiar JSON</button>
+        <button id="exportDeckBtn" class="secondary">Exportar JSON</button>
+        <button id="importDeckBtn" class="secondary">Importar JSON</button>
+        <input id="importDeckInput" type="file" accept="application/json" hidden />
+      </div>
+      <div class="row">
+        <label class="toggle">
+          <input id="safeModeToggle" type="checkbox" />
+          <span id="safeModeLabel">Modo seguro</span>
+        </label>
+        <button id="langToggleBtn" class="secondary">EN</button>
+      </div>
+
+      <div class="row">
+        <label class="toggle">
+          <span id="ruleMinLabel">Duración regla min</span>
+          <input id="ruleMinInput" type="number" min="1" max="20" value="1" />
+        </label>
+        <label class="toggle">
+          <span id="ruleMaxLabel">Duración regla max</span>
+          <input id="ruleMaxInput" type="number" min="1" max="20" value="7" />
+        </label>
+        <label class="toggle">
+          <input id="reduceDupesToggle" type="checkbox" checked />
+          <span id="reduceDupesLabel">Reducir repetidas</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="card" id="cardDisplay">
+      <div class="card-label" id="cardLabel">CARTA</div>
+      <div class="card-text" id="cardText">Listos?</div>
+    </div>
+
+    <div class="panel">
+      <div class="row">
+        <button id="startBtn" class="success">Empezar</button>
+        <button id="prevBtn" class="secondary">Anterior</button>
+        <button id="nextBtn">Siguiente</button>
+        <button id="resetBtn" class="secondary">Reset Mazo</button>
+      </div>
+    </div>
+
+
+    <div class="panel">
+      <h2 id="feedbackHeading">Feedback rápido</h2>
+      <div class="row">
+        <button id="markConfusingBtn" class="secondary">Confusa</button>
+        <button id="markPacingBtn" class="secondary">Pacing</button>
+        <button id="markFavoriteBtn" class="secondary">Favorita</button>
+        <button id="exportFeedbackBtn" class="secondary">Exportar feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
