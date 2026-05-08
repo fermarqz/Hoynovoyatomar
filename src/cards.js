@@ -115,7 +115,7 @@ export const CARDS = [
       "{A} di a qué edad {B} dio su primer beso; toma esa cantidad en tragos.",
       "A la cuenta de 3, todos votan: ¿quién aquí tiene el peor gusto? Toma 5 tragos.",
       "A la cuenta de 3, todos votan: ¿quién aquí es el más celoso? Toma 3 tragos.",
-      "{A} y {B} compiten en quién aguanta más sin hablar. El que pierda toma 3 tragos."
+      "{A} y {B} compiten en quién aguanta más sin hablar. El que pierda toma 3 tragos.",
       "{A} lee el último mensaje de alguien que {B} escoja o toma cinco tragos.",
       "{A} mándale un chat a la persona que {B} escoja o toma medio trago.",
       "{A}: Fuck, Marry, Kill con las personas que {B} quiera.",
